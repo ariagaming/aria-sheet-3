@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%; }
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+body {
+  background: lightgrey;
+  font-size: 12px;
+  font-family: fantasy; }
+
+.page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 2rem;
+  width: 80%; }
+
+.page[data-size="A4"] {
+  width: 21cm !important;
+  height: 29.7cm !important; }
+
+.page[data-size="A4"][data-layout="portrait"] {
+  width: 29.7cm !important;
+  height: 21cm !important; }
+
+.page[data-size="A3"] {
+  width: 29.7cm !important;
+  height: 42cm !important; }
+
+.page[data-size="A3"][data-layout="portrait"] {
+  width: 42cm !important;
+  height: 29.7cm !important; }
+
+.page[data-size="A5"] {
+  width: 14.8cm !important;
+  height: 21cm !important; }
+
+.page[data-size="A5"][data-layout="portrait"] {
+  width: 21cm !important;
+  height: 14.8cm !important; }
+
+@page {
+  size: A4;
+  margin: 0; }
+
+@media print {
+  html,
+  body,
+  #root {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: 0 !important; }
+  .page {
+    margin: 0 !important;
+    box-shadow: 0 0 0 !important; }
+  .main-menu,
+  .sheet-menu {
+    visibility: hidden; } }
+
+.dialog {
+  display: none;
+  z-index: 999;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid grey;
+  height: 600px;
+  max-height: 600px;
+  min-height: 600px;
+  position: relative; }
+  .dialog .dialog-title {
+    background: #01bcd5;
+    color: white;
+    padding: 5px 1rem; }
+  .dialog .dialog-list {
+    margin: 5px;
+    width: 200px; }
+    .dialog .dialog-list .dialog-list__row {
+      padding: 2px 5px; }
+      .dialog .dialog-list .dialog-list__row:hover {
+        background: #01bcd5;
+        color: white; }
+      .dialog .dialog-list .dialog-list__row.selected {
+        background: #01bcd5;
+        color: white; }
+  .dialog .dialog-content {
+    margin: 5px 10px 10px 5px;
+    min-width: 500px;
+    overflow-y: auto;
+    max-height: 500px; }
+  .dialog .dialog-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e3ecf3;
+    padding: 0.5rem;
+    border-top: 1px solid grey; }
+  .dialog.show {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.main-menu,
+.sheet-menu {
+  position: fixed;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  z-index: 99999; }
+  .main-menu .menu-item,
+  .sheet-menu .menu-item {
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 3px;
+    user-select: none; }
+    .main-menu .menu-item:hover,
+    .sheet-menu .menu-item:hover {
+      background: pink;
+      color: black;
+      cursor: pointer; }
+    .main-menu .menu-item:active,
+    .sheet-menu .menu-item:active {
+      background: palevioletred;
+      color: white; }
+    .main-menu .menu-item a,
+    .main-menu .menu-item span,
+    .sheet-menu .menu-item a,
+    .sheet-menu .menu-item span {
+      padding: 18px 5px 5px 5px;
+      display: block;
+      height: 100%;
+      width: 100%; }
+
+.main-menu {
+  left: 5px;
+  right: unset; }
+
+/* this is the list */
+.ck-list li {
+  padding: 0.5em; }
+  .ck-list li:hover {
+    background: #01bcd5;
+    color: white;
+    cursor: pointer; }
+
+.ck-details-form .ck-details-field .title {
+  font-weight: bold;
+  margin-right: 10px; }
+
+.baudin-ui-edit-form .baudin-ui-form-fields .baudin-ui-edit-field .baudin-ui-edit-field--title {
+  display: inline-block;
+  width: 150px; }
+
+div[id*="uniforms-"] {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-columns: 1fr;
+  grid-gap: 3px; }
+  div[id*="uniforms-"] label {
+    grid-column-start: 1;
+    grid-column-end: 6; }
+
+input[type="number"],
+.ant-input-number-input {
+  text-align: center; }
+
+form {
+  background: white;
+  padding: 1rem; }
+
+.ck-content {
+  padding: 1rem; }

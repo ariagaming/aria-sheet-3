@@ -1,0 +1,53 @@
+.dialog {
+    display: none;
+    z-index: 999;
+    background: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    height: 600px;
+    max-height: 600px;
+    min-height: 600px;
+    position: relative;
+    .dialog-title {
+        background: rgba(1, 188, 213, 1.000);
+        color: white;
+        padding: 5px 1rem;
+    }
+    .dialog-list {
+        margin: 5px;
+        width: 200px;
+        .dialog-list__row {
+            padding: 2px 5px;
+            &:hover {
+                background: rgba(1, 188, 213, 1.000);
+                color: white;
+            }
+            &.selected {
+                background: rgba(1, 188, 213, 1.000);
+                color: white;
+            }
+        }
+    }
+    .dialog-content {
+        margin: 5px 10px 10px 5px;
+        min-width: 500px;
+        overflow-y: auto;
+        max-height: 500px;
+    }
+    .dialog-footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: lighten(rgba(209, 223, 236, 1.000), 5%);
+        padding: 0.5rem;
+        border-top: 1px solid grey;
+    }
+    &.show {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

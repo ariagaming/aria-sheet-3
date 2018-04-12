@@ -1,0 +1,29 @@
+.page-login {
+  background-image: url("/assets/login_background_2.jpg");
+  background-position-x: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%; }
+  .page-login .baudin-ui-edit-form .error {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid rgba(244, 133, 145, 0.5);
+    border-radius: 10px;
+    background: #fdf3f4;
+    color: #ce1227; }
+  .page-login .baudin-ui-edit-form .baudin-ui-edit-field {
+    margin-bottom: 0.5rem; }
+    .page-login .baudin-ui-edit-form .baudin-ui-edit-field--title {
+      color: white;
+      text-transform: capitalize; }
+    .page-login .baudin-ui-edit-form .baudin-ui-edit-field--value {
+      width: 250px; }
+  .page-login .login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 2rem; }

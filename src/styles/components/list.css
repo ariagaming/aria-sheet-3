@@ -1,0 +1,7 @@
+/* this is the list */
+.ck-list li {
+  padding: 0.5em; }
+  .ck-list li:hover {
+    background: #01bcd5;
+    color: white;
+    cursor: pointer; }

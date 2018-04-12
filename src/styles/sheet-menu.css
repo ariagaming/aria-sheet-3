@@ -1,0 +1,41 @@
+.main-menu,
+.sheet-menu {
+  position: fixed;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 50px;
+  display: flex;
+  flex-direction: column;
+  z-index: 99999; }
+  .main-menu .menu-item,
+  .sheet-menu .menu-item {
+    width: 100%;
+    height: 50px;
+    border: 1px solid gray;
+    background: white;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 3px;
+    user-select: none; }
+    .main-menu .menu-item:hover,
+    .sheet-menu .menu-item:hover {
+      background: pink;
+      color: black;
+      cursor: pointer; }
+    .main-menu .menu-item:active,
+    .sheet-menu .menu-item:active {
+      background: palevioletred;
+      color: white; }
+    .main-menu .menu-item a,
+    .main-menu .menu-item span,
+    .sheet-menu .menu-item a,
+    .sheet-menu .menu-item span {
+      padding: 18px 5px 5px 5px;
+      display: block;
+      height: 100%;
+      width: 100%; }
+
+.main-menu {
+  left: 5px;
+  right: unset; }

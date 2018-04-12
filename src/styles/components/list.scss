@@ -1,0 +1,13 @@
+/* this is the list */
+
+@import "./../colors.scss";
+.ck-list {
+    li {
+        padding: 0.5em;
+        &:hover {
+            background: $primary;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
